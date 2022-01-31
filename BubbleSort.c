@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <SFML/Window.h>
+#include <SFML/Window.h>      
 #include <SFML/Graphics.h>
 int randomh = 0, part = 1;
 int itera = 0;
@@ -12,7 +12,7 @@ struct data
 } line[800];
 
 int main()
-{
+{       // setting windows screen
         sfVideoMode mode = {800, 600, 32};
         sfRenderWindow *window = sfRenderWindow_create(mode, "Bubble Sort", sfResize | sfClose, NULL);
         sfRectangleShape *shape = sfRectangleShape_create();
@@ -20,24 +20,24 @@ int main()
         while (sfRenderWindow_isOpen(window))
         {
                 sfEvent event;
-                while (sfRenderWindow_pollEvent(window, &event))
+                while (sfRenderWindow_pollEvent(window, &event))   //for closing window
                 {
                         if (event.type == sfEvtClosed)
                         {
                                 sfRenderWindow_close(window);
                         }
                 }
-                if (part == 2)
+                if (part == 2)                                          // Bubble Sort Logic
                 {
-                        if (line[itera].height < line[itera + 1].height)
+                        if (line[itera].height > line[itera + 1].height)
                         {
 
-                                major = line[itera].height;
-                                line[itera].height = line[itera + 1].height;
-                                line[itera + 1].height = major;
+                                major = line[itera+1].height;
+                                line[itera+1].height = line[itera].height;
+                                line[itera].height = major;
                         }
                 }
-
+                // Generating random numbers as array input
                 if (part == 1)
                 {
                         for (int i = 0; i < 800; i++)
@@ -51,14 +51,14 @@ int main()
                                 }
                         }
                 }
-
+                // Visualising everything in the window
                 sfRenderWindow_clear(window, sfBlack);
                 for (int i = 0; i < 800; i++)
                 {
                         sfRectangleShape_setFillColor(shape, sfGreen);
                         if (i == itera)
                         {
-                                sfRectangleShape_setFillColor(shape, sfCyan);
+                                sfRectangleShape_setFillColor(shape, sfRed);
                         }
                         
                         sfRectangleShape_setPosition(shape, (sfVector2f){line[i].posx, 600});
