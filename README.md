@@ -18,9 +18,15 @@
 - For compiling and linking all the graphics to your file , for that use: 
 
   ```gcc -Wall -O2 filename.c -lcsfml-graphics -lcsfml-window -o filename```
-    `-lcsfml-graphics` to link executable with csfml-graphics library and `-lcsfml-window` with csfml-window library.
+  
+    ```-lcsfml-graphics``` to link executable with csfml-graphics library and ```-lcsfml-window``` with csfml-window library.
 - Run the executable file, for that use :
   ```./filename```
+
+#### Technologies Used:
+
+- C  
+- CSFML
 
 ###### Screenshots/Gifs of running project will be added soon.
 
