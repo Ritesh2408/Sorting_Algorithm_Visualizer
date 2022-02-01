@@ -1,81 +1,80 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <SFML/Window.h>      
+#include <stdbool.h>
+#include <unistd.h>
+#include <SFML/Window.h>
 #include <SFML/Graphics.h>
-int randomh = 0, part = 1;
-int itera = 0;
-int major = 0, cont = 0, lims = 799;
-struct data
+
+int n = 80;
+float recHs[80];
+bool sorted = false;
+
+void dispSort(int index, sfRenderWindow *window)
 {
-        int height;
-        int posx;
-} line[800];
+    sfRenderWindow_clear(window, sfBlack);
+    sfRectangleShape *shape = sfRectangleShape_create();
+    for (int i = 0; i < n; i++)
+    {
+        sfRectangleShape_setFillColor(shape, sfWhite);
+        sfRectangleShape_setPosition(shape, (sfVector2f){i * 12, 600 - recHs[i]});
+        sfRectangleShape_setSize(shape,(sfVector2f){10,recHs[i]});
+        sfRectangleShape_setFillColor(shape, sorted || i == index ? sfGreen : sfWhite);
+        //sfRectangleShape_setRotation(shape, 180);
+        sfRenderWindow_drawRectangleShape(window, shape, NULL);
+    }
+    sfRenderWindow_display(window);
+}
+
+void bubbleSort(sfRenderWindow *window)
+{
+    //usleep(5000000);
+    int i,j;
+    for (i = 0; i < n-1; i++)
+    {
+        for (j = 0; j < n-i-1; j++)
+        {
+            if (recHs[j]>recHs[j+1])
+            {
+                int temp = recHs[j];
+                recHs[j]=recHs[j+1];
+                recHs[j+1]=temp;
+            }
+            usleep(1100);
+            dispSort(j,window);
+            
+        }
+        
+        
+    }
+    sorted = true;
+    dispSort(i, window);
+}
 
 int main()
-{       // setting windows screen
-        sfVideoMode mode = {800, 600, 32};
-        sfRenderWindow *window = sfRenderWindow_create(mode, "Bubble Sort", sfResize | sfClose, NULL);
-        sfRectangleShape *shape = sfRectangleShape_create();
-        sfRectangleShape_setFillColor(shape, sfGreen);
-        while (sfRenderWindow_isOpen(window))
+{
+    sfVideoMode mode = {960, 600, 32};
+    sfRenderWindow *window = sfRenderWindow_create(mode, "Bubble Sort", sfResize | sfClose, NULL);
+    for (int i = 0; i < n; i++)
+    {
+         recHs[i]=(rand()%500);
+    }
+
+    while (sfRenderWindow_isOpen(window))
+    {
+        sfEvent event;
+        while (sfRenderWindow_pollEvent(window, &event))
         {
-                sfEvent event;
-                while (sfRenderWindow_pollEvent(window, &event))   //for closing window
-                {
-                        if (event.type == sfEvtClosed)
-                        {
-                                sfRenderWindow_close(window);
-                        }
-                }
-                if (part == 2)                                          // Bubble Sort Logic
-                {
-                        if (line[itera].height > line[itera + 1].height)
-                        {
-
-                                major = line[itera+1].height;
-                                line[itera+1].height = line[itera].height;
-                                line[itera].height = major;
-                        }
-                }
-                // Generating random numbers as array input
-                if (part == 1)
-                {
-                        for (int i = 0; i < 800; i++)
-                        {
-                                randomh = 1 + rand() % (600);
-                                line[i].posx = i;
-                                line[i].height = randomh;
-                                if (i == 799)
-                                {
-                                        part = 2;
-                                }
-                        }
-                }
-                // Visualising everything in the window
-                sfRenderWindow_clear(window, sfBlack);
-                for (int i = 0; i < 800; i++)
-                {
-                        sfRectangleShape_setFillColor(shape, sfGreen);
-                        if (i == itera)
-                        {
-                                sfRectangleShape_setFillColor(shape, sfRed);
-                        }
-                        
-                        sfRectangleShape_setPosition(shape, (sfVector2f){line[i].posx, 600});
-                        sfRectangleShape_setSize(shape, (sfVector2f){2, line[i].height});
-                        sfRectangleShape_setRotation(shape, 180);
-                        sfRenderWindow_drawRectangleShape(window, shape, NULL);
-                }
-
-                sfRenderWindow_display(window);
-                itera++;
-                if (itera >= lims)
-                {
-                        itera = 0;
-                        cont++;
-                        lims--;
-                }
+            if (event.type == sfEvtClosed)
+            {
+                sfRenderWindow_close(window);
+            }
         }
 
-        return 0;
+        if (!sorted)
+        {
+            dispSort(0, window);
+            bubbleSort(window);
+        }
+    }
+    return 0;
 }
