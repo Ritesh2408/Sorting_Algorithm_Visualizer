@@ -18,7 +18,7 @@ void dispSort(int index, sfRenderWindow *window)
         sfRectangleShape_setFillColor(shape, sfWhite);
         sfRectangleShape_setPosition(shape, (sfVector2f){i * 12, 600 - recHs[i]});
         sfRectangleShape_setSize(shape,(sfVector2f){10,recHs[i]});
-        sfRectangleShape_setFillColor(shape, sorted || i == index ? sfGreen : sfWhite);
+        sfRectangleShape_setFillColor(shape, sorted || i == index ? sfMagenta : sfWhite);
         //sfRectangleShape_setRotation(shape, 180);
         sfRenderWindow_drawRectangleShape(window, shape, NULL);
     }
