@@ -35,15 +35,14 @@
 
 ##### Bubble Sort:
 
-<!-- ![BubbleSort](gif/Bubblesort.gif) -->
-<img src="gif/Bubblesort.gif" width="750" height="350"/>
+<img src="gif/Bubblesort.gif" width="750" height="380"/>
 ##### Insertion Sort:
 
-![InsertionSort](gif/Insertionsort.gif)
+<img src="gif/Insertionsort.gif" width="750" height="380"/>
 
 ##### Selection Sort:
 
-![SelectionSort](gif/Selectionsort.gif)
+<img src="gif/Selectionsort.gif" width="750" height="380"/>
 
 
 
