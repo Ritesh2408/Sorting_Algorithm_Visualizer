@@ -31,6 +31,12 @@
 - C  
 - CSFML
 
+#### How it works?
+
+- The coloured line in the white bars shows on which element the sorting is taking place and how the element is getting sorted.
+- After doing sorting logically according to the respective sorts, it moves to next element.
+- Once the array is sorted, all the bars gets light up with different colour.
+
 #### Working Application 
 
 ##### Bubble Sort:
