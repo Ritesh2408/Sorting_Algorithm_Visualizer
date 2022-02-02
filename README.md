@@ -23,12 +23,27 @@
     
 - Run the executable file, for that use :
   ```./filename```
+  
+  **For Windows** , Visual Studio is required, any suggestions on how to compile CSFML on windows are most welcome :).
 
 #### Technologies Used:
 
 - C  
 - CSFML
 
-###### Screenshots/Gifs of running project will be added soon.
+#### Working Application 
+
+##### Bubble Sort:
+
+![BubbleSort](gif/Bubblesort.gif)
+
+##### Insertion Sort:
+
+![InsertionSort](gif/Insertionsort.gif)
+
+##### Selection Sort:
+
+![SelectionSort](gif/Selectionsort.gif)
+
 
 
