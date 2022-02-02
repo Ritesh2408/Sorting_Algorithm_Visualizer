@@ -36,6 +36,7 @@
 ##### Bubble Sort:
 
 <img src="gif/Bubblesort.gif" width="750" height="380"/>
+
 ##### Insertion Sort:
 
 <img src="gif/Insertionsort.gif" width="750" height="380"/>
