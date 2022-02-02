@@ -11,6 +11,7 @@
   3. Insertion Sort
   4. Quick Sort
   5. Merge Sort
+  6. Radix Sort
 
 #### How to run the code? (For Linux)
 
@@ -50,6 +51,22 @@
 ##### Selection Sort:
 
 <img src="gif/Selectionsort.gif" width="750" height="380"/>
+
+##### Radix Sort:
+
+<img src="gif/Radixsort.gif" width="750" height="380"/>
+
+##### Quick Sort: 
+
+<img src="gif/QuickSort.gif" width="750" height="380"/>
+
+##### Merge Sort:
+
+<img src="gif/MergeSort.gif" width="750" height="380"/>
+
+#### Contributors:
+- ![Ritesh Chaudhari](https://github.com/Ritesh2408)
+- ![Sehajdeep Singh](https://github.com/sehajdeep1814)
 
 
 
