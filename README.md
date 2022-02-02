@@ -14,7 +14,7 @@
 
 #### How to run the code? (For Linux)
 
-- Istall CSFML library from [Here](https://www.sfml-dev.org/download/csfml/)
+- Install CSFML library from [Here](https://www.sfml-dev.org/download/csfml/)
 - For compiling and linking all the graphics to your file , for that use: 
 
   ```gcc -Wall -O2 filename.c -lcsfml-graphics -lcsfml-window -o filename```
