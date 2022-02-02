@@ -36,7 +36,7 @@
 ##### Bubble Sort:
 
 <!-- ![BubbleSort](gif/Bubblesort.gif) -->
-<img src="gif/Bubblesort.gif" width="250" height="250"/>
+<img src="gif/Bubblesort.gif" width="750" height="350"/>
 ##### Insertion Sort:
 
 ![InsertionSort](gif/Insertionsort.gif)
