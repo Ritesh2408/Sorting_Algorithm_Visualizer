@@ -64,9 +64,6 @@
 
 <img src="gif/MergeSort.gif" width="750" height="380"/>
 
-#### Contributors:
-- ![Ritesh Chaudhari](https://github.com/Ritesh2408)
-- ![Sehajdeep Singh](https://github.com/sehajdeep1814)
 
 
 
