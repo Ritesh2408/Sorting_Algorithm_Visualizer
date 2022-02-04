@@ -69,8 +69,8 @@
 
 #### Authors :
 
-- Ritesh Narendra Chaundhari - https://github.com/Ritesh2408
-- Sehajdeep Singh - https://github.com/sehajdeep1814
+- ![Ritesh Narendra Chaudhari](https://github.com/Ritesh2408)
+- ![Sehajdeep Singh](https://github.com/sehajdeep1814)
 
 
 #### **Pull Requests are Welcomed, Giving A Star is appreciated**
