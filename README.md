@@ -67,14 +67,9 @@
 
 <img src="gif/MergeSort.gif" width="750" height="380"/>
 
-#### References :
-
-- Basics of CSFML from General Vagueness' YouTube channel (https://www.youtube.com/playlist?list=PLPKREfHMgptMi1xTYIOrho-mKMAS2RdnD)
-- Sorting Visualizer using C++ (https://www.youtube.com/watch?v=QUO9ycJ2f9g)
-
 #### Authors :
 
-- Ritesh Narendra Chaundhary - https://github.com/Ritesh2408
+- Ritesh Narendra Chaundhari - https://github.com/Ritesh2408
 - Sehajdeep Singh - https://github.com/sehajdeep1814
 
 
